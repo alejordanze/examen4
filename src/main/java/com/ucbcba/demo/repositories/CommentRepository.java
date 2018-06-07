@@ -12,5 +12,7 @@ public interface CommentRepository extends CrudRepository<Comment, Integer> {
     @Query("select c, count(c) from Comment c group by c.user")
     Iterable<Comment> getTop3();
 
+    @Query("select c, avg(c.score),count(c) from Comment c group by c.user")
+    Iterable<Comment> getTop3califs();
 
 }
