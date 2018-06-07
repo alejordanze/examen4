@@ -67,4 +67,14 @@ public class RestaurantServiceImpl implements RestaurantService {
         return average;
     }
 
+    @Override
+    public Iterable<Restaurant> getCommentsRestaurant() {
+        Iterable<Restaurant> restaurants = listAllRestaurants();
+        restaurants.forEach(restaurant -> {
+            restaurant.setCommentsQuantity(restaurant.getComments().size());;
+        });
+        return restaurants;
+    }
+
+
 }

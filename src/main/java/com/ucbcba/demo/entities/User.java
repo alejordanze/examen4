@@ -24,6 +24,8 @@ public class User {
     private String firstName;
     @Size(min=1, message="This field cannot be blank")
     private String lastName;
+    private Integer count;
+    private Float average;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
     private List<Comment> comments;

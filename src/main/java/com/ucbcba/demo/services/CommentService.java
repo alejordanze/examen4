@@ -14,4 +14,6 @@ public interface CommentService {
 
     Iterable<Comment> listAllCommentsByUser(Integer userId);
 
+    Iterable<Comment> getTop3();
+
 }

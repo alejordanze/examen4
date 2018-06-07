@@ -23,4 +23,6 @@ public interface RestaurantService {
 
     Integer getScore(Integer id);
 
+    Iterable<Restaurant> getCommentsRestaurant();
+
 }

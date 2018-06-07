@@ -52,4 +52,9 @@ public class CommentServiceImpl implements CommentService {
         return (Iterable<Comment>)res;
     }
 
+    @Override
+    public Iterable<Comment> getTop3() {
+        return commentRepository.getTop3();
+    }
+
 }

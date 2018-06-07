@@ -308,4 +308,21 @@ public class RestaurantController {
         return "redirect:/login";
     }
 
+    @RequestMapping(value = "userComments/top3")
+    public String usersCommentsTop(Model model) {
+        Iterable<Comment> list = commentService.getTop3();
+        list.forEach(comment->{
+            comment.getUser().getUsername();
+        });
+        model.addAttribute("list",list);
+        return "topCommentsUsers";
+    }
+
+    @RequestMapping(value = "restaurantsComments/top3R")
+    public String restaurantCommentsTop(Model model) {
+        Iterable<Restaurant> list = restaurantService.getCommentsRestaurant();
+        model.addAttribute("list",list);
+        return "topCommentsRestaurants";
+    }
+
 }

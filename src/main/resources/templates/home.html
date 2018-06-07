@@ -231,9 +231,7 @@
                         <a th:if="${logged}" th:href="${'/user/view/' + user.id}" data-nav-section="events">
                             <button class="button">Profile</button>
                         </a>
-                        <a th:if="${logged}" href="/logout" data-nav-section="menu">
-                            <button class="button">Logout</button>
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -259,6 +257,9 @@
             <li>
                 <button onclick="show('table')">Table</button>
                 <button onclick="show('map')">Map</button>
+                <button onclick="">Top users comentaristas</button>
+                <button onclick="">Top restaurants comentados</button>
+                <button onclick="">Top users calificadores</button>
             </li>
             <script>
                 function show(type) {

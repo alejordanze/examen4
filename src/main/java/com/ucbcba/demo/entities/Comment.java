@@ -32,6 +32,8 @@ public class Comment {
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 
+    private Integer quantity;
+
     public Comment(){
     }
 
